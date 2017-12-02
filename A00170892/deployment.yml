@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 3
+  template: 
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: dakar9499/python-service
+        ports:
+        - containerPort: 5000
