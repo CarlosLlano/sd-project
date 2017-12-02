@@ -37,7 +37,7 @@ En el playground utilizado se deben ejecutar los siguientes comandos:
 
 ```bash
 export SERVICE_IP=$(kubectl get service python-service -o go-template='{{.spec.clusterIP}}')
-export SERVICE_PORT=$(kubectl get service python-service -o go-template='{{(index .spec.ports 
+export SERVICE_PORT=$(kubectl get service python-service -o go-template='{{(index .spec.ports 0).port}}')
 kubectl run busybox  --generator=run-pod/v1 --image=busybox --restart=Never --tty -i --env "SERVICE_IP=$SERVICE_IP" --env "SERVICE_PORT=$SERVICE_PORT"
 wget -qO- http://$SERVICE_IP:$SERVICE_PORT
 ```
