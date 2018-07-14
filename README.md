@@ -1,7 +1,6 @@
 # PROYECTO SISTEMAS DISTRIBUIDOS #
 
 
-___
 
 ***1.Consigne los comandos de linux necesarios para el aprovisionamiento de los servicios empleados. 
 En este punto no debe incluir archivos tipo Dockerfile solo se requiere que usted identifique los comandos o 
